@@ -10,22 +10,35 @@ const Header = () => {
         <nav className="navigation nav--main">
           <ul className="menu">
             <li className="menu-item">
-              <NavLink to="/" end className={({ isActive }) => isActive ? 'current-menu-item' : ''}>
+              <NavLink 
+                to="/" 
+                end 
+                className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+              >
                 Accueil
               </NavLink>
             </li>
             <li className="menu-item">
-              <NavLink to="/carte" className={({ isActive }) => isActive ? 'current-menu-item' : ''}>
+              <NavLink 
+                to="/carte" 
+                className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+              >
                 La Carte
               </NavLink>
             </li>
             <li className="menu-item">
-              <NavLink to="/esprit" className={({ isActive }) => isActive ? 'current-menu-item' : ''}>
+              <NavLink 
+                to="/esprit" 
+                className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+              >
                 L'esprit
               </NavLink>
             </li>
             <li className="menu-item">
-              <NavLink to="/presse" className={({ isActive }) => isActive ? 'current-menu-item' : ''}>
+              <NavLink 
+                to="/presse" 
+                className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+              >
                 Presse
               </NavLink>
             </li>

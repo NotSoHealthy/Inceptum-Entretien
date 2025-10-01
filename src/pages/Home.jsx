@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -59,15 +60,21 @@ const Home = () => {
             </hgroup>
             <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center'}}>
               <div>
-                <img src="/assets/images/2014/05/food1-1024x685.jpg" alt="Nos plats" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte" style={{display: 'block', textDecoration: 'none', color: 'inherit'}}>
+                  <img src="/assets/images/2014/05/food1-1024x685.jpg" alt="Nos plats" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', cursor: 'pointer', transition: 'transform 0.3s ease'}} />
+                </Link>
                 <p>La base, c'est le produit bien sûr, mais aussi des femmes et des hommes qui le respectent.</p>
               </div>
               <div>
-                <img src="/assets/images/2014/05/food2-1024x685.jpg" alt="Nos spécialités" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte" style={{display: 'block', textDecoration: 'none', color: 'inherit'}}>
+                  <img src="/assets/images/2014/05/food2-1024x685.jpg" alt="Nos spécialités" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', cursor: 'pointer', transition: 'transform 0.3s ease'}} />
+                </Link>
                 <p>L'hiver, direction le nord de l'Italie : ambiance ragù, viandes braisées, polenta, risotti, pappardelle. L'été retour vers le Sud : ambiance coquillages et crustacés.</p>
               </div>
               <div>
-                <img src="/assets/images/2014/05/food3-1024x685.jpg" alt="Notre passion" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte" style={{display: 'block', textDecoration: 'none', color: 'inherit'}}>
+                  <img src="/assets/images/2014/05/food3-1024x685.jpg" alt="Notre passion" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', cursor: 'pointer', transition: 'transform 0.3s ease'}} />
+                </Link>
                 <p>Et puis, l'accent et la générosité du Midi, ça fait la différence !</p>
               </div>
             </div>

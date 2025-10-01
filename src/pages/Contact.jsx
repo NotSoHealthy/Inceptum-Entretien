@@ -56,7 +56,7 @@ const Contact = () => {
                 <div style={{marginBottom: '30px'}}>
                   <h4 style={{fontSize: '1.3em', marginBottom: '10px', color: '#262526'}}>Horaires</h4>
                   <p style={{lineHeight: '1.7', color: '#666'}}>
-                    Mardi - Samedi<br />
+                    Lundi - Dimanche<br />
                     12h00 - 14h30<br />
                     19h30 - 22h30
                   </p>
