@@ -37,24 +37,33 @@ const About = () => {
 
             <div style={{marginTop: '80px', textAlign: 'center'}}>
               <h3 style={{fontSize: '2em', marginBottom: '30px', color: '#c59d5f'}}>Notre Cuisine</h3>
-              <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', marginTop: '40px'}}>
-                <div style={{padding: '30px', background: '#f9f9f9', borderRadius: '8px'}}>
-                  <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Produits d'Exception</h4>
-                  <p style={{lineHeight: '1.7', color: '#666'}}>
-                    Nous sélectionnons rigoureusement nos produits auprès d'artisans italiens et locaux pour garantir la meilleure qualité.
-                  </p>
+              <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginTop: '40px'}}>
+                <div style={{padding: '0', background: '#fff', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'}}>
+                  <img src="/assets/images/produit-exceptions.png" alt="Produits d'Exception" style={{width: '100%', height: '200px', objectFit: 'cover'}} />
+                  <div style={{padding: '30px'}}>
+                    <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Produits d'Exception</h4>
+                    <p style={{lineHeight: '1.7', color: '#666'}}>
+                      Nous sélectionnons rigoureusement nos produits auprès d'artisans italiens et locaux pour garantir la meilleure qualité.
+                    </p>
+                  </div>
                 </div>
-                <div style={{padding: '30px', background: '#f9f9f9', borderRadius: '8px'}}>
-                  <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Cuisine de Saison</h4>
-                  <p style={{lineHeight: '1.7', color: '#666'}}>
-                    Notre carte évolue au fil des saisons, du Nord de l'Italie en hiver aux saveurs du Sud en été.
-                  </p>
+                <div style={{padding: '0', background: '#fff', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'}}>
+                  <img src="/assets/images/cuisine-de-saison.png" alt="Cuisine de Saison" style={{width: '100%', height: '200px', objectFit: 'cover'}} />
+                  <div style={{padding: '30px'}}>
+                    <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Cuisine de Saison</h4>
+                    <p style={{lineHeight: '1.7', color: '#666'}}>
+                      Notre carte évolue au fil des saisons, du Nord de l'Italie en hiver aux saveurs du Sud en été.
+                    </p>
+                  </div>
                 </div>
-                <div style={{padding: '30px', background: '#f9f9f9', borderRadius: '8px'}}>
-                  <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Passion Italienne</h4>
-                  <p style={{lineHeight: '1.7', color: '#666'}}>
-                    Chaque plat est préparé avec amour et passion, dans le respect des traditions culinaires italiennes.
-                  </p>
+                <div style={{padding: '0', background: '#fff', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'}}>
+                  <img src="/assets/images/passion-italienne.png" alt="Passion Italienne" style={{width: '100%', height: '200px', objectFit: 'cover'}} />
+                  <div style={{padding: '30px'}}>
+                    <h4 style={{fontSize: '1.5em', marginBottom: '15px', color: '#262526'}}>Passion Italienne</h4>
+                    <p style={{lineHeight: '1.7', color: '#666'}}>
+                      Chaque plat est préparé avec amour et passion, dans le respect des traditions culinaires italiennes.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
