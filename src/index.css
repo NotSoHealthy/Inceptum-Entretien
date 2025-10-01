@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--color-text);
@@ -44,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   color: var(--color-heading);
   margin: 0;
@@ -129,6 +129,10 @@ a:hover {
 .menu-item a:hover,
 .menu-item a.current-menu-item {
   color: var(--color-primary);
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px !important;
+  text-decoration-color: #ad844d !important;
 }
 
 /* Footer Styles */

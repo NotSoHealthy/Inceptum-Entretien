@@ -55,10 +55,10 @@ const Contact = () => {
 
                 <div style={{marginBottom: '30px'}}>
                   <h4 style={{fontSize: '1.3em', marginBottom: '10px', color: '#262526'}}>Horaires</h4>
-                  <p style={{lineHeight: '1.7', color: '#666'}}>
+                    <p style={{lineHeight: '1.7', color: '#666'}}>
                       Tous les jours<br />
                       11h00 - 02h00
-                  </p>
+                    </p>
                 </div>
 
                 <div style={{marginTop: '40px'}}>

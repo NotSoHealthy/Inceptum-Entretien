@@ -47,7 +47,7 @@ const Header = () => {
                 L'esprit
               </NavLink>
             </li>
-            
+
             <li className="menu-item">
               <NavLink to="/contact" className={({ isActive }) => isActive ? 'current-menu-item' : ''} onClick={closeMenu}>
                 Contact

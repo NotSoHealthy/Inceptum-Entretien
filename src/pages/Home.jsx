@@ -61,36 +61,36 @@ const Home = () => {
             <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center'}}>
               <div>
                 <Link to="/carte#entrees" style={{display: 'block', cursor: 'pointer'}}>
-                  <img 
-                    src="/assets/images/2014/05/food1-1024x685.jpg" 
-                    alt="Nos plats" 
-                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
-                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
-                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  <img
+                    src="/assets/images/2014/05/food1-1024x685.jpg"
+                    alt="Nos plats"
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}}
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}}
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}}
                   />
                 </Link>
                 <p>La base, c'est le produit bien sûr, mais aussi des femmes et des hommes qui le respectent.</p>
               </div>
               <div>
                 <Link to="/carte#plats" style={{display: 'block', cursor: 'pointer'}}>
-                  <img 
-                    src="/assets/images/2014/05/food2-1024x685.jpg" 
-                    alt="Nos spécialités" 
-                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
-                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
-                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  <img
+                    src="/assets/images/2014/05/food2-1024x685.jpg"
+                    alt="Nos spécialités"
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}}
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}}
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}}
                   />
                 </Link>
                 <p>L'hiver, direction le nord de l'Italie : ambiance ragù, viandes braisées, polenta, risotti, pappardelle. L'été retour vers le Sud : ambiance coquillages et crustacés.</p>
               </div>
               <div>
                 <Link to="/carte#desserts" style={{display: 'block', cursor: 'pointer'}}>
-                  <img 
-                    src="/assets/images/2014/05/food3-1024x685.jpg" 
-                    alt="Notre passion" 
-                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
-                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
-                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  <img
+                    src="/assets/images/2014/05/food3-1024x685.jpg"
+                    alt="Notre passion"
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}}
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}}
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}}
                   />
                 </Link>
                 <p>Et puis, l'accent et la générosité du Midi, ça fait la différence !</p>
