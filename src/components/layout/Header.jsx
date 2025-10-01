@@ -34,6 +34,11 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
+            <li className="menu-item">
+              <NavLink to="/admin" className={({ isActive }) => isActive ? 'current-menu-item' : ''}>
+                Admin
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

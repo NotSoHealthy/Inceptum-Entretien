@@ -1,9 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ReservationForm from '../components/ReservationForm';
 
 const Menu = () => {
+  const [showReservationForm, setShowReservationForm] = useState(false);
+  const [selectedDishes, setSelectedDishes] = useState([]);
+
   useEffect(() => {
     document.title = 'La Carte | Saviora';
   }, []);
+
+  const handleReserveDish = (dish) => {
+    setSelectedDishes([dish]);
+    setShowReservationForm(true);
+  };
 
   return (
     <div>
@@ -27,18 +36,52 @@ const Menu = () => {
             <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Entrées</h4>
               <div className="menu-items">
-                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
-                  <div style={{textAlign: 'left'}}>
+                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '800px', margin: '0 auto 20px', padding: '15px', background: 'white', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)'}}>
+                  <div style={{textAlign: 'left', flex: 1}}>
                     <h5 style={{fontSize: '1.1em', marginBottom: '3px'}}>Antipasti du jour / + Jambon de Parme</h5>
                   </div>
-                  <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap', marginLeft: '20px'}}>18 € / 22 €</span>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+                    <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap'}}>18 € / 22 €</span>
+                    <button
+                      onClick={() => handleReserveDish({name: 'Antipasti du jour', price: 18})}
+                      style={{
+                        background: '#c59d5f',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 16px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        fontSize: '0.9em',
+                        fontWeight: '600'
+                      }}
+                    >
+                      Réserver
+                    </button>
+                  </div>
                 </div>
-                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
-                  <div style={{textAlign: 'left'}}>
+                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '800px', margin: '0 auto 20px', padding: '15px', background: 'white', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)'}}>
+                  <div style={{textAlign: 'left', flex: 1}}>
                     <h5 style={{fontSize: '1.1em', marginBottom: '3px'}}>Parme (IGP 24 Mois)</h5>
                     <p style={{color: '#666', fontSize: '0.9em', margin: '0'}}>roquette + mozzarella di bufala</p>
                   </div>
-                  <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap', marginLeft: '20px'}}>16 €</span>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+                    <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap'}}>16 €</span>
+                    <button
+                      onClick={() => handleReserveDish({name: 'Parme (IGP 24 Mois)', price: 16})}
+                      style={{
+                        background: '#c59d5f',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 16px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        fontSize: '0.9em',
+                        fontWeight: '600'
+                      }}
+                    >
+                      Réserver
+                    </button>
+                  </div>
                 </div>
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
                   <div style={{textAlign: 'left'}}>
@@ -91,12 +134,29 @@ const Menu = () => {
             <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Plats</h4>
               <div className="menu-items">
-                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
-                  <div style={{textAlign: 'left'}}>
+                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '800px', margin: '0 auto 20px', padding: '15px', background: 'white', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)'}}>
+                  <div style={{textAlign: 'left', flex: 1}}>
                     <h5 style={{fontSize: '1.1em', marginBottom: '3px'}}>Linguine alle vongole</h5>
                     <p style={{color: '#666', fontSize: '0.9em', margin: '0'}}>(palourdes sauvages de Camargue)</p>
                   </div>
-                  <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap', marginLeft: '20px'}}>22 €</span>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+                    <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap'}}>22 €</span>
+                    <button
+                      onClick={() => handleReserveDish({name: 'Linguine alle vongole', price: 22})}
+                      style={{
+                        background: '#c59d5f',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 16px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        fontSize: '0.9em',
+                        fontWeight: '600'
+                      }}
+                    >
+                      Réserver
+                    </button>
+                  </div>
                 </div>
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
                   <div style={{textAlign: 'left'}}>
@@ -148,11 +208,28 @@ const Menu = () => {
             <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Desserts</h4>
               <div className="menu-items">
-                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
-                  <div style={{textAlign: 'left'}}>
+                <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '800px', margin: '0 auto 20px', padding: '15px', background: 'white', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)'}}>
+                  <div style={{textAlign: 'left', flex: 1}}>
                     <h5 style={{fontSize: '1.1em', marginBottom: '3px'}}>Tiramisu maison</h5>
                   </div>
-                  <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap', marginLeft: '20px'}}>9 €</span>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+                    <span style={{color: '#c59d5f', fontWeight: '600', whiteSpace: 'nowrap'}}>9 €</span>
+                    <button
+                      onClick={() => handleReserveDish({name: 'Tiramisu maison', price: 9})}
+                      style={{
+                        background: '#c59d5f',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 16px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        fontSize: '0.9em',
+                        fontWeight: '600'
+                      }}
+                    >
+                      Réserver
+                    </button>
+                  </div>
                 </div>
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
                   <div style={{textAlign: 'left'}}>
@@ -296,6 +373,17 @@ const Menu = () => {
           </div>
         </section>
       </article>
+
+      {/* Reservation Form Modal */}
+      {showReservationForm && (
+        <ReservationForm
+          selectedDishes={selectedDishes}
+          onClose={() => {
+            setShowReservationForm(false);
+            setSelectedDishes([]);
+          }}
+        />
+      )}
     </div>
   );
 };
