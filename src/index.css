@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #c59d5f;
+  --color-text: #515150;
+  --color-heading: #262526;
+  --color-bg: #ffffff;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-title--image img {
+  max-height: 60px;
+  width: auto;
+}
+
+.navigation {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.navigation.nav--main .menu-item a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-heading) !important;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-heading);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu-item a:hover,
+.menu-item a.current-menu-item {
+  color: var(--color-primary);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: auto;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .site-header__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .site-title--image img {
+    max-height: 50px;
+  }
+}
