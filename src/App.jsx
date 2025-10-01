@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import About from './pages/About';
-import Press from './pages/Press';
-import Contact from './pages/Contact';
-import AdminDashboard from './pages/AdminDashboard';
-import { ReservationProvider } from './context/ReservationContext';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import About from "./pages/About";
+import Press from "./pages/Press";
+import Contact from "./pages/Contact";
+import AdminDashboard from "./pages/AdminDashboard";
+import { ReservationProvider } from "./context/ReservationContext";
 
 function App() {
   return (
