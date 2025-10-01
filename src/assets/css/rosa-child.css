@@ -18,45 +18,65 @@ specifically the 'Template: rosa' line. */
 /*CANTINETTA FONTS*/
 @font-face {
   font-family: 'portenia';
-  src: url("fonts/portenia.woff2") format("woff2"), url("fonts/portenia.woff") format("woff"), url("fonts/portenia.ttf") format("truetype"); }
+  src: url('fonts/portenia.woff2') format('woff2'),
+    url('fonts/portenia.woff') format('woff'),
+    url('fonts/portenia.ttf') format('truetype');
+}
 @font-face {
   font-family: 'maven';
-  src: url("fonts/maven.woff2") format("woff2"), url("fonts/maven.woff") format("woff"); }
+  src: url('fonts/maven.woff2') format('woff2'),
+    url('fonts/maven.woff') format('woff');
+}
 /*OTTO FONTS*/
 @font-face {
   font-family: 'learningcurve';
-  src: url("fonts/learningcurve.woff") format("woff"), url("fonts/learningcurve.ttf") format("truetype"); }
+  src: url('fonts/learningcurve.woff') format('woff'),
+    url('fonts/learningcurve.ttf') format('truetype');
+}
 @font-face {
   font-family: 'andale';
-  src: url("fonts/andale.woff2") format("woff2"), url("fonts/andale.woff") format("woff"), url("fonts/andale.ttf") format("truetype"); }
+  src: url('fonts/andale.woff2') format('woff2'),
+    url('fonts/andale.woff') format('woff'),
+    url('fonts/andale.ttf') format('truetype');
+}
 /*COMMON FONTS*/
 @font-face {
   font-family: 'cabin';
-  src: url("fonts/cabin.woff2") format("woff2"), url("fonts/cabin.woff") format("woff"); }
+  src: url('fonts/cabin.woff2') format('woff2'),
+    url('fonts/cabin.woff') format('woff');
+}
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Cabin:wght@400;700&family=Maven+Pro:wght@400;700&display=swap');
 .portenia {
-  font-family: 'portenia'; }
+  font-family: 'portenia';
+}
 
 .maven {
-  font-family: 'maven'; }
+  font-family: 'Maven Pro', sans-serif;
+}
 
 .andale {
-  font-family: 'andale'; }
+  font-family: 'andale';
+}
 
 .learningcurve {
-  font-family: 'learningcurve'; }
+  font-family: 'learningcurve';
+}
 
 .cabin {
-  font-family: 'cabin'; }
+  font-family: 'Cabin', sans-serif;
+}
 
 /*Footer*/
 article.post-580,
 article.post-580 * {
   background-color: #252525 !important;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 article.post-580 {
   border-left: 12px solid #fff;
-  border-right: 12px solid #fff; }
+  border-right: 12px solid #fff;
+}
 
 .link-resto {
   display: block;
@@ -65,7 +85,8 @@ article.post-580 {
   height: 120px;
   text-indent: -999em;
   overflow: hidden;
-  background: url(img/logo-otto-blanc.png) 50% 50% no-repeat transparent; }
+  background: url(img/logo-otto-blanc.png) 50% 50% no-repeat transparent;
+}
 
 .btn--top {
   border-radius: 100%;
@@ -73,7 +94,8 @@ article.post-580 {
   width: 60px;
   height: 60px;
   text-align: center;
-  top: -32px; }
+  top: -32px;
+}
 
 .btn--top_text {
   display: block;
@@ -87,15 +109,17 @@ article.post-580 {
   text-transform: uppercase;
   letter-spacing: 2px;
   -webkit-transform: none;
-  transform: none; }
-  .btn--top_text .btn__arrow {
-    border-color: #000;
-    position: relative;
-    top: 0;
-    left: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin: 15px auto 0; }
+  transform: none;
+}
+.btn--top_text .btn__arrow {
+  border-color: #000;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 15px auto 0;
+}
 
 .social a {
   display: inline-block;
@@ -104,29 +128,37 @@ article.post-580 {
   background: url(img/envelope.jpg) 50% 50% no-repeat transparent;
   width: 25px;
   height: 36px;
-  margin: 15px; }
+  margin: 15px;
+}
 .social .ig {
-  background-image: url(img/social-ig.png); }
+  background-image: url(img/social-ig.png);
+}
 
 .site-footer,
 .sidebar--footer__dark,
 .copyright-area.copyright-area__dark,
 .copyright-area .container,
 .page footer .article__content {
-  background-color: #252525; }
+  background-color: #252525;
+}
 
 .page footer * {
-  color: #fff !important; }
+  color: #fff !important;
+}
 .page footer .btn--top_text {
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .site-footer aside {
-  display: none; }
+  display: none;
+}
 
 .prefoot h3 {
-  font-size: 19px; }
+  font-size: 19px;
+}
 .prefoot p {
-  font-size: 17px; }
+  font-size: 17px;
+}
 
 .copyright-text {
   padding: 25px;
@@ -136,117 +168,152 @@ article.post-580 {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0; }
-  .copyright-text a {
-    font-family: "cabin" !important; }
+  margin: 0;
+}
+.copyright-text a {
+  font-family: 'cabin' !important;
+}
 
 .resto-map {
   display: block;
   width: 100%;
   min-height: 660px;
-  overflow: hidden; }
-  .resto-map a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 660px;
-    text-indent: -999em;
-    overflow: hidden;
-    background: url(img/la-cantinetta-map.jpg) 50% 50% no-repeat transparent;
-    background-size: cover; }
+  overflow: hidden;
+}
+.resto-map a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 660px;
+  text-indent: -999em;
+  overflow: hidden;
+  background: url(img/la-cantinetta-map.jpg) 50% 50% no-repeat transparent;
+  background-size: cover;
+}
 
 #wpadminbar a {
-  color: inherit !important; }
+  color: inherit !important;
+}
 
 .arrows {
-  display: none; }
+  display: none;
+}
 
 html {
-  font-family: 'cabin' !important; }
+  font-family: 'cabin' !important;
+}
 
 h1,
 a {
-  font-family: 'maven' !important; }
+  font-family: 'maven' !important;
+}
 
 a {
   border-color: #ad844d !important;
   /*color:$textcolor !important;*/
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 h2 {
   /*font-family: 'learningcurve' !important;*/
   font-family: 'portenia' !important;
-  color: #ad844d !important; }
+  color: #ad844d !important;
+}
+
+.headline__secondary {
+  font-family: 'Herr Von Muellerhoff', 'portenia', cursive !important;
+}
 
 @media screen and (min-width: 901px) {
   .headline__primary {
     letter-spacing: 0.35em !important;
-    margin: 10px 0 0 20px; }
+    margin: 10px 0 0 20px;
+  }
 
   .headline__secondary {
     font-size: 120px;
-    line-height: 0.8; }
-    .headline__secondary .first-letter {
-      font-size: 120px;
-      margin: 0;
-      letter-spacing: normal;
-      padding: 0; } }
+    line-height: 0.8;
+  }
+  .headline__secondary .first-letter {
+    font-size: 120px;
+    margin: 0;
+    letter-spacing: normal;
+    padding: 0;
+  }
+}
 .site-header .nav--main a,
 .headline__description a {
   color: #fff !important;
-  font-family: 'cabin' !important; }
+  font-family: 'cabin' !important;
+}
 
 .site-header.headroom--not-top .nav--main a {
-  color: #3d3d3d !important; }
+  color: #3d3d3d !important;
+}
 
 .site-header {
-  padding-bottom: 15px !important; }
-  @media screen and (min-width: 901px) {
-    .site-header .nav--main.blacktxt a {
-      color: #3d3d3d !important; } }
-  .site-header button.nav-trigger {
-    left: auto;
-    right: 1.4vw; }
+  padding-bottom: 15px !important;
+}
+@media screen and (min-width: 901px) {
+  .site-header .nav--main.blacktxt a {
+    color: #3d3d3d !important;
+  }
+}
+.site-header button.nav-trigger {
+  left: auto;
+  right: 1.4vw;
+}
 
 .site-logo {
-  padding-top: 15px; }
+  padding-top: 15px;
+}
 
 .blurp--top {
-  display: none; }
+  display: none;
+}
 
 .down-arrow--bubble .arrow {
   border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff; }
+  border-bottom: 2px solid #fff;
+}
 
 .separator--flower,
 .separator--line-flower {
   text-indent: -999em;
-  background: url(img/hr.png) 50% 50% no-repeat transparent; }
+  background: url(img/hr.png) 50% 50% no-repeat transparent;
+}
 
 .centered {
-  text-align: center; }
+  text-align: center;
+}
 
 /*STRATE ON PARLE DE NOUS*/
 @media only screen and (max-width: 900px) {
   #post-445 .headline__primary {
-    margin-top: 30px; } }
+    margin-top: 30px;
+  }
+}
 /*STRATE SPECIALITES*/
 .special {
-  text-align: center; }
-  .special span {
-    font-family: 'andale';
-    font-size: 26px;
-    text-transform: uppercase;
-    margin: 30px 0 25px;
-    display: block; }
+  text-align: center;
+}
+.special span {
+  font-family: 'andale';
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 30px 0 25px;
+  display: block;
+}
 
 /*STRATE CONTACT*/
 .stratecontact h3,
 .prefoot h3 {
-  font-family: 'andale' !important; }
+  font-family: 'andale' !important;
+}
 .stratecontact .pixcode-icon-link,
 .prefoot .pixcode-icon-link {
-  margin: 0 10px; }
+  margin: 0 10px;
+}
 
 .btn-contact {
   padding: 10px 30px;
@@ -257,86 +324,109 @@ h2 {
   background-color: #000;
   border-radius: 3px;
   letter-spacing: 2px;
-  font-weight: normal !important; }
+  font-weight: normal !important;
+}
 
 /*L'ESPRIT*/
 #post-352 .pixcode.pixcode--grid.grid {
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+}
 
 /*Embedded Youtube*/
 .pixcode iframe {
   width: 682px !important;
-  max-width: 100% !important; }
+  max-width: 100% !important;
+}
 
 /*LA CARTE*/
 .menu-list {
-  text-align: center; }
-  .menu-list h2 {
-    display: inline-block;
-    margin: 35px auto 70px;
-    font-family: 'andale' !important;
-    color: #3d3d3d !important;
-    text-align: center;
-    border-bottom: 2px solid #3d3d3d; }
+  text-align: center;
+}
+.menu-list h2 {
+  display: inline-block;
+  margin: 35px auto 70px;
+  font-family: 'andale' !important;
+  color: #3d3d3d !important;
+  text-align: center;
+  border-bottom: 2px solid #3d3d3d;
+}
 
 #post-69 .grid__item.six-twelfths.palm-one-whole {
-  padding: 0 50px; }
+  padding: 0 50px;
+}
 #post-69 .separator--flower {
-  margin: 44px 0; }
+  margin: 44px 0;
+}
 
 .menu-list__item-title,
 .menu-list__item-price {
   font-family: 'andale' !important;
   font-size: 19px;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 /*NEWS*/
 .prevnext {
-  margin: 50px auto; }
-  .prevnext hr {
-    margin: 22px 0 15px; }
-  .prevnext span {
-    display: inline-block;
-    width: 50%;
-    text-transform: uppercase; }
-    .prevnext span a {
-      font-size: 19px;
-      font-weight: normal;
-      color: #3d3d3d; }
-  .prevnext .prev {
-    padding: 0 5% 0 0; }
-  .prevnext .next {
-    text-align: right;
-    padding: 0 0 0 5%; }
+  margin: 50px auto;
+}
+.prevnext hr {
+  margin: 22px 0 15px;
+}
+.prevnext span {
+  display: inline-block;
+  width: 50%;
+  text-transform: uppercase;
+}
+.prevnext span a {
+  font-size: 19px;
+  font-weight: normal;
+  color: #3d3d3d;
+}
+.prevnext .prev {
+  padding: 0 5% 0 0;
+}
+.prevnext .next {
+  text-align: right;
+  padding: 0 0 0 5%;
+}
 
 .read-more-button {
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 /*NEWS SOLO*/
 .singlepost {
-  padding-top: 60px; }
-  .singlepost header {
-    text-align: center; }
-    .singlepost header h1.article__title {
-      margin-bottom: 0; }
-  .singlepost .info {
-    margin: 0;
-    color: #919191; }
-    .singlepost .info span {
-      display: inline-block;
-      margin: 0; }
-      .singlepost .info span a {
-        color: #ad844d !important; }
+  padding-top: 60px;
+}
+.singlepost header {
+  text-align: center;
+}
+.singlepost header h1.article__title {
+  margin-bottom: 0;
+}
+.singlepost .info {
+  margin: 0;
+  color: #919191;
+}
+.singlepost .info span {
+  display: inline-block;
+  margin: 0;
+}
+.singlepost .info span a {
+  color: #ad844d !important;
+}
 
 .archive__title {
   width: 100%;
   text-align: center;
-  margin-top: 72px; }
+  margin-top: 72px;
+}
 
 .map__marker {
-  background: url(img/logo-cantinetta.html) 50% 50% no-repeat #FFFFFF;
+  background: url(img/logo-cantinetta.html) 50% 50% no-repeat #ffffff;
   background-size: 80%;
-  padding: 25px 80px; }
+  padding: 25px 80px;
+}
 
 #stratecontact {
   position: absolute;
@@ -345,91 +435,114 @@ h2 {
   border: 0 none transparent;
   display: block;
   width: 1px;
-  height: 1px; }
+  height: 1px;
+}
 
 a:hover > .pixcode--icon.circle {
   color: #fff !important;
-  background-color: #ad844d !important; }
+  background-color: #ad844d !important;
+}
 
 @media only screen and (max-width: 900px) {
   .headline__primary {
-    font-size: 27px; }
+    font-size: 27px;
+  }
 
   .headline__secondary {
-    font-size: 70px; }
+    font-size: 70px;
+  }
 
   .btn-contact {
     padding: 10px 15px;
     letter-spacing: 0px;
-    font-size: 12px; }
+    font-size: 12px;
+  }
 
   .special span {
     margin-top: 0;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+  }
   .special .grid__item {
-    padding-bottom: 60px; } }
+    padding-bottom: 60px;
+  }
+}
 .suivez_container {
   width: 100%;
   background-color: black;
-  overflow: hidden; }
-  .suivez_container h3 {
-    text-transform: uppercase;
-    font-weight: 25px;
-    margin: 0 auto; }
-  .suivez_container p,
-  .suivez_container a {
-    color: white;
-    text-align: center; }
-  .suivez_container p.social_small_description {
-    font-size: 14px;
-    font-weight: 300;
-    margin: 0 auto 24px;
-    width: 90%;
-    max-width: 150px; }
+  overflow: hidden;
+}
+.suivez_container h3 {
+  text-transform: uppercase;
+  font-weight: 25px;
+  margin: 0 auto;
+}
+.suivez_container p,
+.suivez_container a {
+  color: white;
+  text-align: center;
+}
+.suivez_container p.social_small_description {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0 auto 24px;
+  width: 90%;
+  max-width: 150px;
+}
+.suivez_container ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.suivez_container li {
+  list-style: none inside;
+  display: inline-block;
+  vertical-align: top;
+  width: 16.66667vw;
+  height: 16.66667vw;
+  min-width: 190px;
+  min-height: 190px;
+  position: relative;
+  text-align: center;
+}
+.suivez_container li .content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+@media (max-width: 1023.99px) {
   .suivez_container ul {
-    padding: 0;
-    margin: 0;
-    display: flex; }
+    flex-flow: row wrap;
+  }
   .suivez_container li {
-    list-style: none inside;
-    display: inline-block;
-    vertical-align: top;
-    width: 16.66667vw;
-    height: 16.66667vw;
-    min-width: 190px;
-    min-height: 190px;
-    position: relative;
-    text-align: center; }
-    .suivez_container li .content {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 100%; }
-  @media (max-width: 1023.99px) {
-    .suivez_container ul {
-      flex-flow: row wrap; }
-    .suivez_container li {
-      width: 50%;
-      height: 50vw;
-      min-width: 50%;
-      min-height: 50vw; } }
-  .suivez_container li.instagram_media {
-    cursor: pointer;
-    opacity: 1;
-    transition: all .3s ease-in-out; }
-    .suivez_container li.instagram_media img {
-      display: block; }
-  .suivez_container li.instagram_media:hover {
-    opacity: 0.5;
-    transition: all .3s ease-in-out; }
+    width: 50%;
+    height: 50vw;
+    min-width: 50%;
+    min-height: 50vw;
+  }
+}
+.suivez_container li.instagram_media {
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.suivez_container li.instagram_media img {
+  display: block;
+}
+.suivez_container li.instagram_media:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
 
 .addthis_toolbox {
-  display: none !important; }
+  display: none !important;
+}
 
 .latestNews h2,
 .latestNews .article__date {
-  text-align: center; }
+  text-align: center;
+}
 
 /*E-reservation*/
 .reservation .article {
@@ -437,6 +550,14 @@ a:hover > .pixcode--icon.circle {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+}
+
+/* Fix for homepage header text visibility */
+.article__header .article__headline .headline__primary,
+.article__header .article__headline .headline__secondary,
+.article__header .article__headline .headline__description {
+  opacity: 1 !important;
+}
 
 /*# sourceMappingURL=style.css.map */

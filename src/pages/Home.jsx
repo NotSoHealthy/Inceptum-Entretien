@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -11,17 +12,17 @@ const Home = () => {
         <div className="flexbox">
           <div className="flexbox__item" style={{textAlign: 'center', color: 'white'}}>
             <hgroup className="article__headline">
-              <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '3em', marginBottom: '10px'}}>Bienvenue</h2>
+              <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '5em', marginBottom: '10px'}}>Bienvenue</h2>
               <h1 className="headline__primary" style={{fontSize: '4em', fontWeight: 'bold', margin: '20px 0'}}>Saviora</h1>
               <div className="headline__description">
                 <div className="separator">
-                  <span style={{fontSize: '2em'}}>&#10043;</span>
+                  <span style={{fontSize: '2em'}}></span>
                 </div>
-                <h5 style={{letterSpacing: '2px', marginTop: '20px'}}>RESTAURANT ITALIEN</h5>
-                <h6 style={{marginTop: '20px'}}>
+                
+                <h6 style={{marginTop: '20px', fontSize: '1.2em'}}>
                   <a href="https://www.google.fr/maps/place/La+Cantinetta" target="_blank" rel="noopener noreferrer" style={{color: 'white', textDecoration: 'none'}}>
-                    24 cours Julien - 13006 Les Berges du Lac<br />
-                    tel : 04 91 48 10 48
+                    20 rue Mohammed V - Les Berges du Lac<br />
+                    tel : 25 485 695
                   </a>
                 </h6>
               </div>
@@ -59,15 +60,39 @@ const Home = () => {
             </hgroup>
             <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center'}}>
               <div>
-                <img src="/assets/images/2014/05/food1-1024x685.jpg" alt="Nos plats" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte#entrees" style={{display: 'block', cursor: 'pointer'}}>
+                  <img 
+                    src="/assets/images/2014/05/food1-1024x685.jpg" 
+                    alt="Nos plats" 
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  />
+                </Link>
                 <p>La base, c'est le produit bien sûr, mais aussi des femmes et des hommes qui le respectent.</p>
               </div>
               <div>
-                <img src="/assets/images/2014/05/food2-1024x685.jpg" alt="Nos spécialités" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte#plats" style={{display: 'block', cursor: 'pointer'}}>
+                  <img 
+                    src="/assets/images/2014/05/food2-1024x685.jpg" 
+                    alt="Nos spécialités" 
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  />
+                </Link>
                 <p>L'hiver, direction le nord de l'Italie : ambiance ragù, viandes braisées, polenta, risotti, pappardelle. L'été retour vers le Sud : ambiance coquillages et crustacés.</p>
               </div>
               <div>
-                <img src="/assets/images/2014/05/food3-1024x685.jpg" alt="Notre passion" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px'}} />
+                <Link to="/carte#desserts" style={{display: 'block', cursor: 'pointer'}}>
+                  <img 
+                    src="/assets/images/2014/05/food3-1024x685.jpg" 
+                    alt="Notre passion" 
+                    style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', transition: 'transform 0.3s ease, opacity 0.3s ease'}} 
+                    onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9';}} 
+                    onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1';}} 
+                  />
+                </Link>
                 <p>Et puis, l'accent et la générosité du Midi, ça fait la différence !</p>
               </div>
             </div>

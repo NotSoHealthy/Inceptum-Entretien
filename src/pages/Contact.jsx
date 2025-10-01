@@ -40,28 +40,24 @@ const Contact = () => {
                 <div style={{marginBottom: '30px'}}>
                   <h4 style={{fontSize: '1.3em', marginBottom: '10px', color: '#262526'}}>Adresse</h4>
                   <p style={{lineHeight: '1.7', color: '#666'}}>
-                    24 cours Julien<br />
+                    20 rue Mohammed V<br />
                     13006 Les Berges du Lac<br />
-                    France
+                    Tunisie
                   </p>
                 </div>
 
                 <div style={{marginBottom: '30px'}}>
                   <h4 style={{fontSize: '1.3em', marginBottom: '10px', color: '#262526'}}>Téléphone</h4>
                   <p style={{lineHeight: '1.7'}}>
-                    <a href="tel:0491481048" style={{color: '#c59d5f', textDecoration: 'none'}}>04 91 48 10 48</a>
+                    <a href="tel:25485695" style={{color: '#c59d5f', textDecoration: 'none'}}>25 485 695</a>
                   </p>
                 </div>
 
                 <div style={{marginBottom: '30px'}}>
                   <h4 style={{fontSize: '1.3em', marginBottom: '10px', color: '#262526'}}>Horaires</h4>
                   <p style={{lineHeight: '1.7', color: '#666'}}>
-                    Mardi - Samedi<br />
-                    12h00 - 14h30<br />
-                    19h30 - 22h30
-                  </p>
-                  <p style={{lineHeight: '1.7', color: '#666', marginTop: '10px'}}>
-                    Fermé dimanche et lundi
+                      Tous les jours<br />
+                      11h00 - 02h00
                   </p>
                 </div>
 
