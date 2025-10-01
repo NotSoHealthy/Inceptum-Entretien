@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Email System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .step {
+        background: #f0f0f0;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      .highlight {
+        background: yellow;
+        padding: 2px 5px;
+      }
+      .console-box {
+        background: #000;
+        color: #0f0;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🧪 Test du Système Email - Demo Mode</h1>
+
+    <div class="step">
+      <h3>1. Ouvrez votre navigateur sur l'application</h3>
+      <p>URL: <strong>http://localhost:5174</strong></p>
+    </div>
+
+    <div class="step">
+      <h3>2. Ouvrez la Console du Navigateur</h3>
+      <p>
+        Appuyez sur <span class="highlight">F12</span> puis cliquez sur l'onglet
+        <span class="highlight">"Console"</span>
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>3. Créez une réservation</h3>
+      <p>Menu → Choisissez un plat → Réservez</p>
+    </div>
+
+    <div class="step">
+      <h3>4. Allez au Dashboard Admin</h3>
+      <p>Cliquez sur "Admin" dans le menu</p>
+    </div>
+
+    <div class="step">
+      <h3>5. Confirmez la réservation</h3>
+      <p>Cliquez sur le bouton <span class="highlight">"Confirmer"</span></p>
+    </div>
+
+    <div class="step">
+      <h3>6. Regardez la Console !</h3>
+      <p>Vous devriez voir quelque chose comme ça :</p>
+      <div class="console-box">
+        🎭 Mode démo - Email affiché dans la console 📧 EMAIL SENT TO:
+        client@example.com 📧 EMAIL CONTENT: Cher/Chère John Doe, Votre
+        réservation à La Cantinetta a été confirmée ! Détails de votre
+        réservation : • Date : 01/10/2025 • Heure : 19:30 ...
+      </div>
+    </div>
+
+    <h2>🚀 Pour Activer les Vrais Emails</h2>
+    <p>Modifiez le fichier <code>src/config/emailConfig.js</code> :</p>
+    <pre style="background: #f0f0f0; padding: 10px">
+USE_REAL_EMAIL: true,  // Changez false à true
+EMAILJS_SERVICE_ID: 'votre_vrai_service_id',
+EMAILJS_TEMPLATE_ID: 'votre_vrai_template_id',
+EMAILJS_PUBLIC_KEY: 'votre_vraie_clé',
+    </pre>
+
+    <p>
+      <strong>Important :</strong> Vous devez d'abord créer un compte EmailJS
+      gratuit sur emailjs.com
+    </p>
+  </body>
+</html>

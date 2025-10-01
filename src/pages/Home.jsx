@@ -350,6 +350,77 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <section className="reviews-section" style={{padding: '100px 20px', background: '#fafafa'}}>
+  <div className="container" style={{maxWidth: '1100px', margin: '0 auto', textAlign: 'center'}}>
+    <hgroup style={{marginBottom: '60px'}}>
+      <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '3em', color: '#c59d5f'}}>Ce que disent</h2>
+      <h1 className="headline__primary" style={{fontSize: '2.5em', marginTop: '10px', fontWeight: 'bold'}}>Nos Clients</h1>
+      <div className="separator" style={{margin: '20px auto', width: '60px', height: '3px', backgroundColor: '#c59d5f', borderRadius: '2px'}}></div>
+    </hgroup>
+
+    <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px'}}>
+      
+      <div style={{
+        background: '#fff',
+        padding: '40px 30px',
+        borderRadius: '12px',
+        boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-10px)';
+        e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
+      }}>
+        <p style={{fontStyle: 'italic', marginBottom: '20px', fontSize: '1.1em', color: '#555'}}>"Un restaurant magnifique avec une ambiance chaleureuse et des plats savoureux !"</p>
+        <h5 style={{fontWeight: 'bold', color: '#c59d5f'}}>— Marie D.</h5>
+      </div>
+
+      <div style={{
+        background: '#fff',
+        padding: '40px 30px',
+        borderRadius: '12px',
+        boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-10px)';
+        e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
+      }}>
+        <p style={{fontStyle: 'italic', marginBottom: '20px', fontSize: '1.1em', color: '#555'}}>"Les meilleures pâtes que j’ai mangées à Tunis, service impeccable !"</p>
+        <h5 style={{fontWeight: 'bold', color: '#c59d5f'}}>— Karim B.</h5>
+      </div>
+
+      <div style={{
+        background: '#fff',
+        padding: '40px 30px',
+        borderRadius: '12px',
+        boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-10px)';
+        e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
+      }}>
+        <p style={{fontStyle: 'italic', marginBottom: '20px', fontSize: '1.1em', color: '#555'}}>"Une expérience culinaire exceptionnelle, on reviendra très vite."</p>
+        <h5 style={{fontWeight: 'bold', color: '#c59d5f'}}>— Sophie L.</h5>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <section className="map-section" style={{padding: '0', margin: '0'}}>
           <div style={{width: '100%', height: '450px'}}>
@@ -365,6 +436,67 @@ const Home = () => {
             ></iframe>
           </div>
         </section>
+        <section className="reservation-section" style={{padding: '100px 20px', background: '#fff'}}>
+  <div className="container" style={{maxWidth: '600px', margin: '0 auto', textAlign: 'center'}}>
+    <hgroup style={{marginBottom: '40px'}}>
+      <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '3em', color: '#c59d5f'}}>Réservez</h2>
+      <h1 className="headline__primary" style={{fontSize: '2em', marginTop: '10px', fontWeight: 'bold'}}>Votre Table</h1>
+      <div className="separator" style={{margin: '20px auto', width: '60px', height: '3px', backgroundColor: '#c59d5f', borderRadius: '2px'}}></div>
+    </hgroup>
+
+    <form style={{display: 'grid', gap: '20px', textAlign: 'left'}}>
+      {/* Name */}
+      <div>
+        <label style={{display: 'block', marginBottom: '8px', fontWeight: 'bold'}}>Nom complet</label>
+        <input type="text" name="name" placeholder="Votre nom" required 
+          style={{width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc'}} />
+      </div>
+
+      {/* Email */}
+      <div>
+        <label style={{display: 'block', marginBottom: '8px', fontWeight: 'bold'}}>Email</label>
+        <input type="email" name="email" placeholder="Votre email" required 
+          style={{width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc'}} />
+      </div>
+
+      {/* Date */}
+      <div>
+        <label style={{display: 'block', marginBottom: '8px', fontWeight: 'bold'}}>Date</label>
+        <input type="date" name="date" required 
+          style={{width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc'}} />
+      </div>
+
+      {/* Time */}
+      <div>
+        <label style={{display: 'block', marginBottom: '8px', fontWeight: 'bold'}}>Heure</label>
+        <input type="time" name="time" required 
+          style={{width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc'}} />
+      </div>
+
+      {/* Submit */}
+      <div style={{textAlign: 'center'}}>
+        <button type="submit" 
+          style={{
+            backgroundColor: '#c59d5f',
+            color: '#fff',
+            padding: '12px 30px',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '1.1em',
+            transition: 'background 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#a37e3b'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#c59d5f'}
+        >
+          Réserver
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
       </article>
     </div>
   );

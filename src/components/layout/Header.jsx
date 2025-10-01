@@ -39,7 +39,7 @@ const Header = () => {
             </li>
             <li className="menu-item">
               <NavLink to="/carte" className={({ isActive }) => isActive ? 'current-menu-item' : ''} onClick={closeMenu}>
-                Menu
+                La Carte
               </NavLink>
             </li>
             <li className="menu-item">
@@ -47,10 +47,19 @@ const Header = () => {
                 L'esprit
               </NavLink>
             </li>
-
+            <li className="menu-item">
+              <NavLink to="/presse" className={({ isActive }) => isActive ? 'current-menu-item' : ''} onClick={closeMenu}>
+                Presse
+              </NavLink>
+            </li>
             <li className="menu-item">
               <NavLink to="/contact" className={({ isActive }) => isActive ? 'current-menu-item' : ''} onClick={closeMenu}>
                 Contact
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink to="/admin" className={({ isActive }) => isActive ? 'current-menu-item' : ''} onClick={closeMenu}>
+                Admin
               </NavLink>
             </li>
           </ul>
