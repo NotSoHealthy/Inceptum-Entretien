@@ -27,11 +27,10 @@ const Footer = () => {
             
             <div className="footer-section">
               <h4 style={{color: '#c59d5f', marginBottom: '15px', fontSize: '1.2em', fontFamily: 'Source Sans Pro'}}>Horaires</h4>
-              <p style={{lineHeight: '1.8', color: '#ccc'}}>
-                Lundi - Dimanche<br />
-                12h00 - 14h30<br />
-                19h30 - 22h30
-              </p>
+                <p style={{lineHeight: '1.8', color: '#ccc'}}>
+                Tous les jours<br />
+                11h00 - 02h00
+                </p>
             </div>
           </div>
           

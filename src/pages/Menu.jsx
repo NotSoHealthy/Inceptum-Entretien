@@ -24,7 +24,7 @@ const Menu = () => {
               </p>
             </div>
 
-            <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
+            <div id="entrees" className="menu-section" style={{marginBottom: '60px', textAlign: 'center', scrollMarginTop: '100px'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Entrées</h4>
               <div className="menu-items">
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
@@ -88,7 +88,7 @@ const Menu = () => {
 
             <div style={{textAlign: 'center', margin: '40px 0', color: '#c59d5f', fontSize: '1.5em'}}>✻</div>
 
-            <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
+            <div id="plats" className="menu-section" style={{marginBottom: '60px', textAlign: 'center', scrollMarginTop: '100px'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Plats</h4>
               <div className="menu-items">
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
@@ -145,7 +145,7 @@ const Menu = () => {
 
             <div style={{textAlign: 'center', margin: '40px 0', color: '#c59d5f', fontSize: '1.5em'}}>✻</div>
 
-            <div className="menu-section" style={{marginBottom: '60px', textAlign: 'center'}}>
+            <div id="desserts" className="menu-section" style={{marginBottom: '60px', textAlign: 'center', scrollMarginTop: '100px'}}>
               <h4 style={{fontSize: '1.8em', marginBottom: '30px', color: '#262526', borderBottom: '2px solid #c59d5f', paddingBottom: '10px', display: 'inline-block'}}>Desserts</h4>
               <div className="menu-items">
                 <div className="menu-item" style={{marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', maxWidth: '600px', margin: '0 auto 20px'}}>
