@@ -1,7 +1,43 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  const videos = [
+    {
+      src: "/assets/videos/video-1.mp4",
+      title: "Notre cuisine en action",
+      description: "Découvrez l'art culinaire de notre chef"
+    },
+    {
+      src: "/assets/videos/video-2.mp4", 
+      title: "Ambiance du restaurant",
+      description: "L'atmosphère chaleureuse de Saviora"
+    },
+    {
+      src: "/assets/videos/video-3.mp4",
+      title: "Nos spécialités",
+      description: "Les plats qui font notre réputation"
+    }
+  ];
+
+  const nextVideo = () => {
+    setCurrentVideoIndex((prevIndex) => 
+      prevIndex === videos.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevVideo = () => {
+    setCurrentVideoIndex((prevIndex) => 
+      prevIndex === 0 ? videos.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToVideo = (index) => {
+    setCurrentVideoIndex(index);
+  };
+
   useEffect(() => {
     document.title = 'Saviora | Les Berges du Lac';
   }, []);
@@ -34,7 +70,7 @@ const Home = () => {
       <article className="article--page">
         <section className="article__content" style={{padding: '80px 20px'}}>
           <div className="container" style={{maxWidth: '1250px', margin: '0 auto'}}>
-            <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px'}}>
+            <div className="grid mobile-center" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px'}}>
               <div>
                 <hgroup className="article__headline" style={{textAlign: 'center', marginBottom: '30px'}}>
                   <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '2.5em', color: '#c59d5f'}}>L'esprit</h2>
@@ -52,13 +88,229 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Video Carousel Section */}
+        <section className="video-carousel-section" style={{padding: '80px 20px', background: '#f9f9f9'}}>
+          <div className="container" style={{maxWidth: '1250px', margin: '0 auto'}}>
+            <hgroup style={{textAlign: 'center', marginBottom: '50px'}}>
+              <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '2.5em', color: '#c59d5f'}}>Découvrez</h2>
+              <h1 className="headline__primary" style={{fontSize: '2em', marginTop: '10px', color: '#333'}}>notre univers</h1>
+            </hgroup>
+            
+            <div className="video-carousel" style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '20px',
+              overflow: 'hidden',
+              padding: '0 40px'
+            }}>
+              {/* Mobile Navigation Arrows */}
+              <button 
+                className="mobile-nav-arrow left"
+                onClick={prevVideo}
+                style={{
+                  display: 'none'
+                }}
+              >
+                ‹
+              </button>
+
+              {/* Previous Video (Left Side) */}
+              <div 
+                className="side-video left-video"
+                onClick={prevVideo}
+                style={{
+                  flex: '0 0 200px',
+                  aspectRatio: '9/16',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  opacity: 0.6,
+                  transform: 'scale(0.8)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
+                  position: 'relative'
+                }}
+                onMouseOver={(e) => {
+                  if (window.innerWidth > 900) {
+                    e.currentTarget.style.opacity = '0.8';
+                    e.currentTarget.style.transform = 'scale(0.85)';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (window.innerWidth > 900) {
+                    e.currentTarget.style.opacity = '0.6';
+                    e.currentTarget.style.transform = 'scale(0.8)';
+                  }
+                }}
+              >
+                <video
+                  src={videos[currentVideoIndex === 0 ? videos.length - 1 : currentVideoIndex - 1].src}
+                  muted
+                  loop
+                  playsInline
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(0,0,0,0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <span style={{color: 'white', fontSize: '24px'}}>‹</span>
+                </div>
+              </div>
+
+              {/* Main Video (Center) */}
+              <div className="main-video" style={{
+                flex: '0 0 300px',
+                aspectRatio: '9/16',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
+                transform: 'scale(1)',
+                transition: 'all 0.3s ease'
+              }}>
+                <video
+                  key={currentVideoIndex}
+                  src={videos[currentVideoIndex].src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                
+                {/* Video Overlay Info */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '20px',
+                  left: '20px',
+                  right: '20px',
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
+                  color: 'white',
+                  padding: '20px',
+                  borderRadius: '10px'
+                }}>
+                  <h4 style={{margin: '0 0 5px 0', fontSize: '1.1em', color: "white"}}>{videos[currentVideoIndex].title}</h4>
+                  <p style={{margin: 0, fontSize: '0.8em', opacity: 0.9}}>{videos[currentVideoIndex].description}</p>
+                </div>
+              </div>
+
+              {/* Next Video (Right Side) */}
+              <div 
+                className="side-video right-video"
+                onClick={nextVideo}
+                style={{
+                  flex: '0 0 200px',
+                  aspectRatio: '9/16',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  opacity: 0.6,
+                  transform: 'scale(0.8)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
+                  position: 'relative'
+                }}
+                onMouseOver={(e) => {
+                  if (window.innerWidth > 900) {
+                    e.currentTarget.style.opacity = '0.8';
+                    e.currentTarget.style.transform = 'scale(0.85)';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (window.innerWidth > 900) {
+                    e.currentTarget.style.opacity = '0.6';
+                    e.currentTarget.style.transform = 'scale(0.8)';
+                  }
+                }}
+              >
+                <video
+                  src={videos[currentVideoIndex === videos.length - 1 ? 0 : currentVideoIndex + 1].src}
+                  muted
+                  loop
+                  playsInline
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(0,0,0,0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <span style={{color: 'white', fontSize: '24px'}}>›</span>
+                </div>
+              </div>
+
+              {/* Mobile Navigation Arrows */}
+              <button 
+                className="mobile-nav-arrow right"
+                onClick={nextVideo}
+                style={{
+                  display: 'none'
+                }}
+              >
+                ›
+              </button>
+            </div>
+
+            {/* Dots Indicator */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '10px',
+              marginTop: '40px'
+            }}>
+              {videos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToVideo(index)}
+                  style={{
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    border: 'none',
+                    background: index === currentVideoIndex ? '#c59d5f' : 'rgba(0,0,0,0.3)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease'
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="article__content" style={{padding: '80px 20px', background: '#f9f9f9'}}>
           <div className="container" style={{maxWidth: '1250px', margin: '0 auto'}}>
             <hgroup style={{textAlign: 'center', marginBottom: '50px'}}>
               <h2 className="headline__secondary" style={{fontFamily: 'Herr Von Muellerhoff', fontSize: '2.5em', color: '#c59d5f'}}>Dans</h2>
               <h1 className="headline__primary" style={{fontSize: '2em', marginTop: '10px'}}>les assiettes</h1>
             </hgroup>
-            <div className="grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center'}}>
+            <div className="grid mobile-center" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center'}}>
               <div>
                 <Link to="/carte" style={{display: 'block', textDecoration: 'none', color: 'inherit'}}>
                   <img src="/assets/images/2014/05/food1-1024x685.jpg" alt="Nos plats" style={{maxWidth: '100%', borderRadius: '8px', marginBottom: '15px', cursor: 'pointer', transition: 'transform 0.3s ease'}} />
